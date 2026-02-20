@@ -1,33 +1,3 @@
-# ai-disclaimer
-
-Interactive CLI that generates an AI usage disclaimer for your project — as a Markdown snippet or a self-contained HTML card.
-
-## Install
-
-```sh
-uv tool install .
-```
-
-## Usage
-
-```sh
-ai-disclaimer
-```
-
-Walks you through a short questionnaire (tools used, contribution split by phase, oversight level, process, accountability) and writes the output to stdout or a file.
-
-## Output formats
-
-**Markdown** — a fenced-code bar chart and plain text sections, ready to paste into any README.
-
-**HTML** — a self-contained `<div>` (style included) with visual progress bars, using the [Flexoki](https://github.com/kepano/flexoki) color palette. Supports `light`, `dark`, and `auto` (follows OS preference) themes.
-
-## Examples
-
-You can see the markdown output in the section below or [here](examples/ai_disclaimer.md) and the corresponding HTML [here](examples/ai_disclaimer.html).
-
----
-
 ## 🤖 AI Disclaimer
 
 This project uses AI-assisted development tools. See the [AI usage policy](https://j23n.com/public/posts/2026/my-ai-policy) for details.
