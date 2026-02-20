@@ -24,7 +24,11 @@ Walks you through a short questionnaire (tools used, contribution split by phase
 
 ## Examples
 
-You can see the markdown output in the section below or [here](examples/ai_disclaimer.md) and the corresponding HTML [here](examples/ai_disclaimer.html).
+You can see the markdown output in the section below or [here](examples/ai_disclaimer.md) and the corresponding HTML:
+
+> ![[ai_disclaimer.png]]
+
+Source code: [here](examples/ai_disclaimer.html)
 
 ---
 
