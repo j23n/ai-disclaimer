@@ -20,11 +20,64 @@ TOOLS = [
             "claude-haiku-4-5-20251001",
         ],
     },
-    {"label": "GitHub Copilot", "models": []},
-    {"label": "Cursor", "models": []},
-    {"label": "ChatGPT", "models": []},
-    {"label": "Gemini", "models": []},
-    {"label": "Windsurf/Codeium", "models": []},
+    {
+        "label": "GitHub Copilot",
+        "models": [
+            "Claude Sonnet 4.6",
+            "Claude Opus 4.6",
+            "Claude Sonnet 4.5",
+            "Claude Opus 4.5",
+            "GPT-5.3-Codex",
+            "GPT-5.2-Codex",
+            "GPT-5.1-Codex",
+            "GPT-4.1",
+            "Gemini 3.1 Pro",
+            "Gemini 3 Pro",
+            "Gemini 2.5 Pro",
+        ],
+    },
+    {
+        "label": "Cursor",
+        "models": [
+            "Claude Sonnet 4.6",
+            "Claude Opus 4.6",
+            "Claude Sonnet 4.5",
+            "Claude Opus 4.5",
+            "GPT-5.3 Codex",
+            "GPT-5.1 Codex",
+            "GPT-5",
+            "Gemini 3.1 Pro",
+            "Gemini 3 Pro",
+            "Composer 1.5",
+        ],
+    },
+    {
+        "label": "ChatGPT",
+        "models": [
+            "o3",
+            "o4-mini",
+            "GPT-4o",
+        ],
+    },
+    {
+        "label": "Gemini",
+        "models": [
+            "gemini-3.1-pro",
+            "gemini-3-pro",
+            "gemini-3-flash",
+            "gemini-2.5-pro",
+        ],
+    },
+    {
+        "label": "Windsurf/Codeium",
+        "models": [
+            "SWE-1.5",
+            "Claude Sonnet 4.6",
+            "Claude Opus 4.6",
+            "GPT-5.3-Codex",
+            "Gemini 3.1 Pro",
+        ],
+    },
     {"label": "Other", "models": []},
 ]
 
@@ -90,22 +143,24 @@ DEFAULT_ACCOUNTABILITY = (
 # ---------------------------------------------------------------------------
 
 _CSS = """
-/* ── Flexoki light tokens (default) ─────────────────────────────────── */
+/* ── Flexoki tokens via light-dark() — single definition, no duplication ── */
 .aidc {
-  --f-bg:         #FFFCF0;
-  --f-bg-alt:     #F2F0E5;
-  --f-border:     #E6E4D9;
-  --f-head-bg:    #282726;
+  color-scheme: light dark;
+  --f-bg:         light-dark(#FFFCF0, #1C1B1A);
+  --f-bg-alt:     light-dark(#F2F0E5, #282726);
+  --f-border:     light-dark(#E6E4D9, #343331);
+  --f-head-bg:    light-dark(#282726, #100F0F);
   --f-head-fg:    #FFFCF0;
-  --f-head-muted: #9F9D96;
-  --f-tx:         #100F0F;
-  --f-tx-2:       #6F6E69;
-  --f-tx-3:       #9F9D96;
-  --f-bar-empty:  #CECDC3;
-  --f-bar-human:  #4385BE;
-  --f-bar-ai:     #8B7EC8;
-  --f-tag-bg:     #F0EAEC;
-  --f-tag-fg:     #5E409D;
+  --f-head-muted: light-dark(#9F9D96, #6F6E69);
+  --f-tx:         light-dark(#100F0F, #FFFCF0);
+  --f-tx-2:       light-dark(#6F6E69, #9F9D96);
+  --f-tx-3:       light-dark(#9F9D96, #6F6E69);
+  --f-bar-empty:  light-dark(#CECDC3, #343331);
+  --f-bar-human:  light-dark(#4385BE, #205EA6);
+  --f-bar-ai:     light-dark(#8B7EC8, #5E409D);
+  --f-tag-bg:     light-dark(#F0EAEC, #261C39);
+  --f-tag-fg:     light-dark(#5E409D, #8B7EC8);
+  --f-link:       light-dark(#205EA6, #4385BE);
   /* Structure */
   font-family: system-ui, -apple-system, sans-serif;
   max-width: 560px;
@@ -117,43 +172,9 @@ _CSS = """
   color: var(--f-tx);
   font-size: 14px;
 }
-/* ── Flexoki dark tokens (auto via media query) ──────────────────────── */
-@media (prefers-color-scheme: dark) {
-  .aidc:not([data-theme="light"]) {
-    --f-bg:         #1C1B1A;
-    --f-bg-alt:     #282726;
-    --f-border:     #343331;
-    --f-head-bg:    #100F0F;
-    --f-head-fg:    #FFFCF0;
-    --f-head-muted: #6F6E69;
-    --f-tx:         #FFFCF0;
-    --f-tx-2:       #9F9D96;
-    --f-tx-3:       #6F6E69;
-    --f-bar-empty:  #343331;
-    --f-bar-human:  #205EA6;
-    --f-bar-ai:     #5E409D;
-    --f-tag-bg:     #261C39;
-    --f-tag-fg:     #8B7EC8;
-  }
-}
-/* ── Flexoki dark tokens (explicit override) ─────────────────────────── */
-.aidc[data-theme="dark"] {
-  --f-bg:         #1C1B1A;
-  --f-bg-alt:     #282726;
-  --f-border:     #343331;
-  --f-head-bg:    #100F0F;
-  --f-head-fg:    #FFFCF0;
-  --f-head-muted: #6F6E69;
-  --f-tx:         #FFFCF0;
-  --f-tx-2:       #9F9D96;
-  --f-tx-3:       #6F6E69;
-  --f-bar-empty:  #343331;
-  --f-bar-human:  #205EA6;
-  --f-bar-ai:     #5E409D;
-  --f-tag-bg:     #261C39;
-  --f-tag-fg:     #8B7EC8;
-}
-/* ── Component styles (all colors via tokens) ────────────────────────── */
+.aidc[data-theme="light"] { color-scheme: light; }
+.aidc[data-theme="dark"]  { color-scheme: dark; }
+/* ── Component styles ──────────────────────────────────────────────────── */
 .aidc-head { background: var(--f-head-bg); color: var(--f-head-fg); padding: 12px 16px; display: flex; justify-content: space-between; align-items: baseline; }
 .aidc-head-title { font-size: 16px; font-weight: 600; }
 .aidc-head-project { font-size: 13px; color: var(--f-head-muted); }
@@ -178,8 +199,10 @@ _CSS = """
 .aidc-field-val { font-size: 13px; color: var(--f-tx-2); margin-top: 2px; }
 .aidc-text { font-size: 13px; color: var(--f-tx-2); line-height: 1.5; margin: 0; }
 .aidc-intro { font-size: 13px; color: var(--f-tx-2); margin: 0 0 8px; }
-.aidc-intro a { color: var(--f-bar-human); }
-.aidc-foot { background: var(--f-bg-alt); padding: 8px 16px; font-size: 12px; color: var(--f-tx-3); text-align: right; border-top: 1px solid var(--f-border); }
+.aidc-intro a { color: var(--f-link); }
+.aidc-foot { background: var(--f-bg-alt); padding: 8px 16px; font-size: 12px; color: var(--f-tx-3); display: flex; justify-content: space-between; align-items: center; border-top: 1px solid var(--f-border); }
+.aidc-foot a { color: var(--f-tx-3); text-decoration: none; }
+.aidc-foot a:hover { text-decoration: underline; }
 """
 
 
@@ -417,7 +440,7 @@ def render_markdown(
     lines.append("### Accountability\n")
     lines.append(accountability + "\n")
 
-    lines.append(f"---\n*Last updated: {project['date']}*\n")
+    lines.append(f"---\n*Last updated: {project['date']} · Generated with [ai-disclaimer](https://github.com/j23n/ai-disclaimer)*\n")
 
     return "\n".join(lines)
 
@@ -517,7 +540,10 @@ def render_html(
         f'    <div class="aidc-lbl">Accountability</div>\n'
         f'    <p class="aidc-text">{e(accountability)}</p>\n'
         f"  </div>\n"
-        f'  <div class="aidc-foot">Last updated: {e(project["date"])}</div>\n'
+        f'  <div class="aidc-foot">'
+        f'<span>Last updated: {e(project["date"])}</span>'
+        f'<span>Generated with <a href="https://github.com/j23n/ai-disclaimer">ai-disclaimer</a></span>'
+        f'</div>\n'
         f"</div>\n"
         f"</div>"
     )
