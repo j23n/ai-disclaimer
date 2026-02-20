@@ -452,8 +452,8 @@ def render_html(
     # Legend
     legend_html = (
         '<div class="aidc-legend">'
-        '<span><span class="aidc-dot" style="background:#2563eb"></span>Human</span>'
-        '<span><span class="aidc-dot" style="background:#7c3aed"></span>AI</span>'
+        '<span><span class="aidc-dot" style="background:var(--f-bar-human)"></span>Human</span>'
+        '<span><span class="aidc-dot" style="background:var(--f-bar-ai)"></span>AI</span>'
         "</div>"
     )
 

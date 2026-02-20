@@ -169,7 +169,7 @@ The human author(s) are solely responsible for the content, accuracy, and fitnes
   </div>
   <div class="aidc-section">
     <div class="aidc-lbl">Contribution Profile</div>
-    <div class="aidc-legend"><span><span class="aidc-dot" style="background:#4385BE"></span>Human</span><span><span class="aidc-dot" style="background:#8B7EC8"></span>AI</span></div>
+    <div class="aidc-legend"><span><span class="aidc-dot" style="background:var(--f-bar-human)"></span>Human</span><span><span class="aidc-dot" style="background:var(--f-bar-ai)"></span>AI</span></div>
     <div class="aidc-phase"><div class="aidc-phase-name">Requirements &amp; Scope</div><div class="aidc-bar-row"><div class="aidc-bar-track"><div class="aidc-bar-h" style="width:85%"></div><div class="aidc-bar-a" style="width:15%"></div></div><span class="aidc-bar-pct">85% human &middot; 15% AI</span></div></div>
 <div class="aidc-phase"><div class="aidc-phase-name">Architecture &amp; Design</div><div class="aidc-bar-row"><div class="aidc-bar-track"><div class="aidc-bar-h" style="width:85%"></div><div class="aidc-bar-a" style="width:15%"></div></div><span class="aidc-bar-pct">85% human &middot; 15% AI</span></div></div>
 <div class="aidc-phase"><div class="aidc-phase-name">Implementation</div><div class="aidc-bar-row"><div class="aidc-bar-track"><div class="aidc-bar-h" style="width:20%"></div><div class="aidc-bar-a" style="width:80%"></div></div><span class="aidc-bar-pct">20% human &middot; 80% AI</span></div></div>
