@@ -2,21 +2,45 @@
 name = "ai-disclaimer"
 version = "0.1.0"
 description = "Interactive CLI tool for generating AI usage disclaimers"
-license = { text = "MIT" }
-authors = [
-    { name = "j23n", email = "oss@j23n.com" }
-]
 readme = "README.md"
 requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [
+    { name = "j23n", email = "oss@j23n.com" },
+]
+keywords = [
+    "ai",
+    "disclaimer",
+    "transparency",
+    "disclosure",
+    "cli",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Software Development",
+    "Topic :: Utilities",
+]
 dependencies = [
     "questionary>=2.0",
 ]
 
 [project.urls]
+Homepage = "https://app.radicle.xyz/nodes/rosa.radicle.xyz/rad:z4Wbrb12czWb8eKWxmKhqobJixnxe"
 Repository = "https://app.radicle.xyz/nodes/rosa.radicle.xyz/rad:z4Wbrb12czWb8eKWxmKhqobJixnxe"
+"Bug Tracker" = "https://app.radicle.xyz/nodes/rosa.radicle.xyz/rad:z4Wbrb12czWb8eKWxmKhqobJixnxe/issues"
 
 [project.scripts]
-ai-disclaimer = "ai_disclaimer:main"
+ai-disclaimer = "ai_disclaimer.cli:main"
 
 [build-system]
 requires = ["uv_build>=0.10.2,<0.11"]
