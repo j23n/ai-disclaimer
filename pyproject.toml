@@ -1,0 +1,15 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ai-disclaimer"
+version = "0.1.0"
+description = "Interactive CLI tool for generating AI usage disclaimers"
+requires-python = ">=3.9"
+dependencies = [
+    "questionary>=2.0",
+]
+
+[project.scripts]
+ai-disclaimer = "ai_disclaimer:main"
