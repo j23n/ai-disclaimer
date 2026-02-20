@@ -156,7 +156,7 @@ _CSS = """
   --f-tx-2:       light-dark(#6F6E69, #9F9D96);
   --f-tx-3:       light-dark(#9F9D96, #6F6E69);
   --f-bar-empty:  light-dark(#CECDC3, #343331);
-  --f-bar-human:  light-dark(#4385BE, #205EA6);
+  --f-bar-human:  light-dark(#D0A215, #AD8301);
   --f-bar-ai:     light-dark(#8B7EC8, #5E409D);
   --f-tag-bg:     light-dark(#F0EAEC, #261C39);
   --f-tag-fg:     light-dark(#5E409D, #8B7EC8);
@@ -407,11 +407,11 @@ def render_markdown(
     else:
         lines.append("This project uses AI-assisted development tools.\n")
 
-    tool_parts = []
+    lines.append("**Tools**\n")
     for t in tools:
         model_str = f" · `{t['model']}`" if t["model"] else ""
-        tool_parts.append(f"{t['name']}{model_str} · {t['mode']}")
-    lines.append(f"**Tools**: {' | '.join(tool_parts)}\n")
+        lines.append(f"- {t['name']}{model_str} · {t['mode']}")
+    lines.append("")
 
     lines.append("### Contribution Profile\n")
     # Column layout (BAR_W=10):
@@ -432,7 +432,8 @@ def render_markdown(
             )
     lines.append("```\n")
 
-    lines.append(f"**Oversight**: {oversight['label']} — {oversight['description']}\n")
+    lines.append(f"**Oversight**: {oversight['label']}\n")
+    lines.append(oversight['description'] + "\n")
 
     lines.append("### Process\n")
     lines.append(process + "\n")
